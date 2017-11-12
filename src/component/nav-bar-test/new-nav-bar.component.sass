@@ -1,0 +1,84 @@
+body
+  margin: 0
+  padding: 0
+  .nav-bar
+    //display: flex
+    //position: relative
+    background-color: #25283D
+    border-radius: 4px
+    margin: 20px auto 0
+    width: 100vw
+    max-width: 820px
+    .menu
+      display: flex
+      position: relative
+      li
+        flex: 1
+        display: flex
+        text-align: center
+        transition: background-color 0.5s ease
+        &:hover
+          background-color: #8f3985
+          .container
+            display: flex
+
+      a
+        flex: 1
+        justify-content: center
+        display: inline-flex
+        color: #fff
+        text-decoration: none
+        padding: 20px
+        position: relative
+
+        .fa
+          font-weight: bold
+          margin-left: 8px
+
+        &.has-dropdown:after
+          position: absolute
+          bottom: -16px
+          left: 50%
+          transform: translateX(-50%)
+          height: 0
+          width: 0
+          border: 8px solid transparent
+          border-top-color: #25283d
+          z-index: 2
+
+
+
+      li
+        &:hover a.has-dropdown:after
+          content: ''
+          border-top-color: #8f3985
+
+  .container
+    display: none
+    position: absolute
+    top: 56px
+    left: 0
+    right: 0
+    text-align: left
+    .container__list
+      flex: 1
+      display: flex
+      flex-wrap: wrap
+    .container__listItem
+      flex: 0 0 25%
+      padding: 10px 30px
+      white-space: nowrap
+      text-overflow: ellipsis
+      div
+        color: #DB6356
+        white-space: nowrap
+        text-overflow: ellipsis
+      &.has-multi
+        .container__list
+          flex-basis: 33.3333%
+          &:not(:last-child)
+            border-right: solid 1px #f3f3f3
+            margin-right: 30px
+        .container__listItem
+          flex-basis: 100%
+

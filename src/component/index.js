@@ -1,0 +1,1 @@
+export {default as  NewNavBarComponent, NewNavBarController} from './nav-bar-test/new-nav-bar.component'

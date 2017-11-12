@@ -1,0 +1,62 @@
+<nav class="nav-bar">
+    <ul class="menu">
+        <li ng-repeat="parent in $ctrl.navBarItems">
+            <a href="#" class="has-dropdown">
+                {{parent.title}}
+                <fa name="angle-down"></fa>
+            </a>
+            <ul class="container">
+                <div class="container__list" ng-repeat="child in parent.childItem">
+                    <div class="container__listItem">
+                        {{child}}
+                    </div>
+                </div>
+
+            </ul>
+        </li>
+        <!--<li>-->
+            <!--<a href="#" class="has-dropdown">-->
+                <!--First Item-->
+                <!--<fa name="angle-down"></fa>-->
+            <!--</a>-->
+            <!--<ul class="container">-->
+                <!--<div class="container__list">-->
+                    <!--<div class="container__listItem">-->
+                        <!--<div>First</div>-->
+                    <!--</div>-->
+                    <!--<div class="container__listItem">-->
+                        <!--<div>Second</div>-->
+                    <!--</div>-->
+                    <!--<div class="container__listItem">-->
+                        <!--<div>Third</div>-->
+                    <!--</div>-->
+                    <!--<div class="container__listItem">-->
+                        <!--<div>Last</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<a href="#" class="has-dropdown">-->
+                <!--Appliance-->
+                <!--<fa name="angle-down"></fa>-->
+            <!--</a>-->
+            <!--<ul class="container has-multi">-->
+                <!--<div class="container__list">-->
+                    <!--<div class="container__listItem">-->
+                        <!--<div>Television</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="container__list">-->
+                    <!--<div class="container__listItem">-->
+                        <!--<div>TV Cast</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <li>
+            <a href="#">Not has dropdown</a>
+        </li>
+        <!--<li>Second Item</li>-->
+    </ul>
+</nav>
